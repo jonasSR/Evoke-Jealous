@@ -1,0 +1,191 @@
+:root {
+    --preto: #050505;
+    --cinza: #111;
+    --prata: #e0e0e0;
+    --white: #ffffff;
+    --accent-gold: #d4af37; /* Mantive um toque de ouro apenas para ícones */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body { 
+    background-color: var(--preto); 
+    color: var(--white); 
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* HEADER ESTILO NAV */
+header {
+    width: 100%; 
+    padding: 30px 5%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-link:hover {
+    letter-spacing: 5px;
+    color: var(--prata);
+}
+
+/* CONTEÚDO PRINCIPAL */
+.content-container {
+    max-width: 1000px;
+    margin: 40px auto 100px;
+    padding: 0 5%;
+}
+
+.policy-header {
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 100px 0 40px;
+}
+
+.policy-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.policy-header p {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    font-weight: 200;
+    color: #888;
+    text-transform: uppercase;
+}
+
+/* GRID DE POLÍTICAS ESTILO PRODUCT-BOX */
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.policy-item {
+    background: var(--cinza);
+    border: 1px solid #222;
+    padding: 40px;
+    transition: 0.5s;
+}
+
+.policy-item:hover {
+    border-color: #444;
+    transform: translateY(-5px);
+}
+
+.policy-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--white);
+}
+
+.policy-item h3 i {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.policy-item p {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.policy-item strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* CAIXA DE CONTATO (ESTILO AUTHORITY BLOCK MAS DARK) */
+.contact-box {
+    margin-top: 100px;
+    padding: 60px 5%;
+    background: var(--white);
+    color: var(--preto);
+    text-align: center;
+    border-radius: 2px;
+}
+
+.contact-box h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-box p {
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* BOTÃO ESTILO LUXURY */
+.btn-whatsapp {
+    padding: 20px 60px; 
+    background: var(--preto); 
+    color: var(--white);
+    text-decoration: none; 
+    font-weight: 700; 
+    letter-spacing: 4px;
+    text-transform: uppercase; 
+    transition: 0.5s; 
+    display: inline-block;
+}
+
+.btn-whatsapp:hover {
+    background: #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    padding: 60px 5%;
+    text-align: center;
+    border-top: 1px solid #111;
+    background: #000;
+}
+
+footer p {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: #444;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+    .policy-header h1 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+    .contact-box {
+        padding: 40px 20px;
+    }
+}
